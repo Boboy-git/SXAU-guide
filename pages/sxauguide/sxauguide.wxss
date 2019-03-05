@@ -1,0 +1,62 @@
+/* pages/sxauguide/sxauguide.wxss */
+/*顶部滑块*/
+.scrollx{
+    display: flex;  /*水平居中*/  
+    white-space: nowrap;  /*	文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。*/
+}
+
+
+.scrollx navigator{
+  display: inline-block; /*垂直居中，多个孩子共享一行*/
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  background: #2d572b;
+  color: white;
+  font-family: "微软雅黑";
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bottom{
+   position:relative; /*相对定位*/
+   float: left;
+   width: 100%;
+}
+.hx_bottomtext{
+  display: block;
+  position: relative;
+  font-family: "微软雅黑";
+  font-size: 15px;
+  width: 100%;
+  top: 10px;
+  left: 45%;
+  color: #ed5e53;
+  margin-bottom: 20px;
+}
+/*控制地点列表的单行展示形式*/
+.hxdoor{
+  position: relative;
+  display: flex; /*水平居中*/
+  width: 100%;
+  height: 50px;
+}
+/*控制单行图片位置*/
+.hx_img{
+  margin-right: 10px;
+  float: left;
+  width: 80px;
+  height: 40px;
+}
+/*控制单行文字*/
+.hxdoor_text{
+  font-size: 16px;
+  font-family: "微软雅黑";
+  color:#333333;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+}
+/*控制go图标*/
+.go{
+ width:20px ;
+  height:20px;
+}

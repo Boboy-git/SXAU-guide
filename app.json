@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sxauintro/sxauintro",
+    "pages/sxauguide/sxauguide"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2d572b",
+    "navigationBarTitleText": "山西农业大学导览",
+    "navigationBarTextStyle": "white"
+  }
+}

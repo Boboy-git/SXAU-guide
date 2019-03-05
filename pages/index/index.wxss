@@ -1,0 +1,59 @@
+/**index.wxss**/
+/* 首页背景图 */
+.index_bg{
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+}
+.indexbg{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.logo{
+  position: fixed;
+  left: 50%;
+  top: 20rpx;
+}
+.weather{
+    position: fixed;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 400;
+    height: 600rpx;
+    font-family: "KaiTi"
+}
+/*农大简介位置*/
+.sxau_intro{
+  position: fixed;
+  left: 50%;
+  top: 68%;
+  margin-left: -200rpx;
+}
+/*逛逛农大位置*/
+.sxau_go{
+  position: fixed;
+  left: 50%;
+  top: 68%;
+  margin-left: 200rpx;
+}
+/* 小圆圈 */
+._sxau_go,._sxau_intro{
+     position: relative; /*子元素的相对定位*/
+     width: 140rpx;
+     height: 140rpx;
+     font-size: 30rpx;
+     background:#fff;
+     color:#82afd8;
+     margin-left: -80rpx;
+     border-radius: 50%; /*控制圆形*/
+     font-family: "楷书";
+    /*文字水平垂直居中*/
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}

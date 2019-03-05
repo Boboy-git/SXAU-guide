@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class='index_bg'> 
+    <image src = "../../images/sxaubg.jpg" class='indexbg' mode='scaleToFill'></image>
+</view>
+<!-- logo区域 -->
+<view class='logo'>
+      <image src='../../images/logo1.png' style='width:269px;height:108px;margin-left:-135px;'></image>
+</view>
+<!-- 天气预报 -->
+<view class="weather">
+  <text>{{weatherData}}</text>
+</view>
+<!--农大简介-->
+<view class='sxau_intro'>
+  <navigator class='_sxau_intro' open-type='navigate' url='../sxauintro/sxauintro' >
+      <view>农 大</view>
+      <view>简 介</view>
+  </navigator>
+</view>
+<!--逛逛农大-->
+<view class='sxau_go'>
+  <navigator class='_sxau_go' open-type='navigate' url='../sxauguide/sxauguide' >
+      <view>逛 逛</view>
+      <view>农 大</view>
+  </navigator>
+</view>

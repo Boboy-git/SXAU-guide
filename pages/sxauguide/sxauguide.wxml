@@ -1,0 +1,425 @@
+<!--pages/sxauguide/sxauguide.wxml-->
+
+
+<scroll-view scroll-x class='scrollx' >
+  <navigator  open-type="redirect" catchtap='hx_door'>校门</navigator>
+  <navigator  open-type="redirect" catchtap='hx_canteen'>餐饮</navigator>
+  <navigator  open-type="redirect" catchtap='hx_supermarket'>超市</navigator>
+  <navigator  open-type="redirect" catchtap='hx_teach'>教学楼</navigator>
+  <navigator   open-type="redirect" catchtap='hx_hospital'>医院</navigator>
+  <navigator  open-type="redirect" catchtap='hx_playground'>体育场</navigator>
+  <navigator  open-type="redirect" catchtap='hx_library'>图书馆</navigator>
+  <navigator  open-type="redirect" catchtap='hx_dorm'>学生公寓</navigator> 
+</scroll-view>
+
+
+<!--地图-->
+<!--longitude经度  latitude纬度 -->
+<map
+  id="map"
+  longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  scale="{{scale}}"
+  style="width: 100%; height: 300px;"
+  markers='{{markers}}' 
+  show-location='true'  
+  bindcallouttap='click' 
+  bindmarkertap='background'
+></map>
+
+<view wx:if="{{ishow}}"><image src='../../images/dh.jpg' style='width:100%;height:300px;'></image></view>
+
+<!--版权-->
+<view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__text">Copyright © 2019 - 版权归原作者所有 </view>
+</view>
+
+<!-- 校门 -->
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_door}}"> 
+  <cover-view class='hx_bottomtext'>校门</cover-view>
+  <view class="page__bd">
+  <view class="weui-cells__title"></view>
+          <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../images/xm.jpg" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">山西农业大学 - 西门</view>      
+                  <cover-image id='door1' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+              </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../images/xm.jpg" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">山西农业大学 - 旧北门</view>      
+                  <cover-image id='door2' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+              </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../images/xm.jpg" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">山西农业大学 - 新北门</view>      
+                  <cover-image id='door3' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+              </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../images/xm.jpg" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">山西农业大学 - 前南门（可过）</view>      
+                  <cover-image id='door4' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+              </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../images/xm.jpg" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">山西农业大学 - 后南门（一般不开）</view>      
+                  <cover-image id='door5' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+              </navigator>
+          </view>
+  </view>
+</view>
+
+
+<!--农大餐饮-->
+<view class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_canteen}}"> 
+        <cover-view class='hx_bottomtext'>餐饮</cover-view>
+<view class="page__bd">
+<view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 谷园</view>      
+                   <cover-image id='canteen1' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 碧桃园</view>      
+                   <cover-image id='canteen2' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 教职工餐厅</view>      
+                   <cover-image id='canteen3' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 小木屋</view>      
+                   <cover-image id='canteen4' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 怡膳园</view>      
+                   <cover-image id='canteen5' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+        </view>
+</view>
+</view>
+
+
+
+<!--农大超市-->
+<view class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_supermarket}}"> 
+        <cover-view class='hx_bottomtext'>超市</cover-view>
+<view class="page__bd">
+<view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 寸草心超市</view>      
+                   <cover-image id='supermarket1' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 周边小超市</view>      
+                   <cover-image id='supermarket2' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 周边小超市</view>      
+                   <cover-image id='supermarket3' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+        </view>
+</view>
+</view>
+
+
+<!--农大教学楼-->
+<view class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_teach}}"> 
+        <cover-view class='hx_bottomtext'>教学楼</cover-view>
+<view class="page__bd">
+<view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 农学楼（1号）</view>      
+                   <cover-image id='teach1' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 实验大楼</view>      
+                   <cover-image id='teach2' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+               <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 崇学楼</view>      
+                   <cover-image id='teach3' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+               <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 理化楼</view>      
+                   <cover-image id='teach4' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+               <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 教学北楼</view>      
+                   <cover-image id='teach5' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+               <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 教学主楼（5号楼）</view>      
+                   <cover-image id='teach6' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 6号楼</view>      
+                   <cover-image id='teach7' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 动物科技学院</view>      
+                   <cover-image id='teach8' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 崇实楼</view>      
+                   <cover-image id='teach9' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 工学院</view>      
+                   <cover-image id='teach10' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 资源环境学院</view>      
+                   <cover-image id='teach11' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 嘉桂教学楼</view>      
+                   <cover-image id='teach12' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 体育部</view>      
+                   <cover-image id='teach13' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+               </navigator>
+
+        </view>
+</view>
+</view>
+
+
+<!--农大校医院-->
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_hospital}}"> 
+        <cover-view class='hx_bottomtext'>医院</cover-view>
+<view class="page__bd">
+<view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 校医院</view>      
+                   <cover-image id='hospital1' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+        </view>
+</view>
+</view>  
+
+<!--农大体育场-->
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_playground}}"> 
+        <cover-view class='hx_bottomtext'>体育场</cover-view>
+<view class="page__bd">
+<view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 大操场</view>      
+                   <cover-image id='playground1' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+
+
+             <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 小操场</view>      
+                   <cover-image id='playground2' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+        </view>
+</view>
+</view>   
+
+<!--农大图书馆-->
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_library}}"> 
+        <cover-view class='hx_bottomtext'>图书馆</cover-view>
+<view class="page__bd">
+<view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 图书馆</view>      
+                   <cover-image id='library1' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">山西农业大学 - 亭兰图书馆</view>      
+                   <cover-image id='library2' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+        </view>
+</view>
+</view>   
+
+<!--农大学生公寓-->
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_dorm}}"> 
+        <cover-view class='hx_bottomtext'>学生公寓</cover-view>
+<view class="page__bd">
+    <view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">学生公寓 1-5</view>      
+                   <cover-image id='dorm1' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+                      
+                      
+                      
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">学生公寓 6-10</view>      
+                   <cover-image id='dorm2' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+
+
+
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">学生公寓 11-19</view>      
+                   <cover-image id='dorm3' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+
+
+
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">学生公寓 21-23</view>      
+                   <cover-image id='dorm4' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+
+
+
+
+          <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">游泳馆 - （活动中心）</view>      
+                   <cover-image id='dorm5' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+
+
+
+           <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/xm.jpg" class='hx_img'></image>
+                </view>
+                <view class="weui-cell__bd">睿智体育馆 - （活动中心）</view>      
+                   <cover-image id='dorm6' style='width:25px;height:25px' catchtap='go' src='../../images/gps.jpg' mode='aspectFit'></cover-image>          
+            </navigator>
+
+      </view>
+    </view>
+</view>   
+
+

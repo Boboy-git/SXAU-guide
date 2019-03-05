@@ -1,0 +1,57 @@
+/* pages/sxauintro/sxauintro.wxss */
+/* 视频区 */
+.sxauvideo{
+  width: 100%;
+  border: 1px solid #fff;
+  height: 400rpx;
+  padding: 5rpx;
+}
+video{
+  width: 100%;
+  height: 100%;
+}
+/*地图导航*/
+.sxauintro_go{
+   margin-left: 90%;
+   margin-top: -30rpx;
+}
+._sxauintro_go{
+     position: relative; /*子元素的相对定位*/
+     width: 110rpx;
+     height: 110rpx;
+     font-size: 22rpx;
+     background:#31632d;
+     color:white;
+     margin-left: -80rpx;
+     border-radius: 50%; /*控制圆形*/
+     font-family: "微软雅黑";
+    /*文字水平垂直居中*/
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+/*文字介绍*/
+.sxauintro_text{
+  width: 90%;
+  margin:20rpx 50rpx;
+}
+.text1{
+  margin-top: 10rpx; 
+  font-size: 22px;
+  font-family: "楷书";
+  color: #2d572b;
+  opacity: 0.8;
+}
+.text2{
+  display: block;
+  font-size: 16px;
+  color: #31632d;
+  opacity: 0.5;
+}
+.text3{
+  color: #888888;
+  font-size: 14px;
+  font-family: "楷书";
+}
